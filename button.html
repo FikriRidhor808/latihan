@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Text Button</title>
+</head>
+<body>
+
+<button id="myButton" onclick="changeText()">Klik saya!</button>
+
+<p id="counterText">0</p>
+<button onclick="increaseCounter()">Hitung</button>
+<button onclick="decreaseCounter()">Kurang</button>
+<button onclick="resetCounter()">Reset</button>
+
+
+<script>
+    function changeText() {
+        var button = document.getElementById("myButton");
+        button.innerHTML = "Tombol diklik!";
+    }
+    var counter = 0;
+
+    function increaseCounter() {
+        counter++;
+        updateCounterText();
+    }
+
+    function decreaseCounter() {
+        counter--;
+        updateCounterText();
+    }
+
+    function resetCounter() {
+        counter = 0;
+        updateCounterText();
+    }
+
+    function updateCounterText() {
+        document.getElementById("counterText").innerHTML = counter;
+    }
+</script>
+
+</body>
+</html>
